@@ -21,7 +21,7 @@ INSERT INTO [SIVIEW_INTEGRATION].[dbo].[MACHINE_TRANSACTION]
            ,[METHOD_ID]
            ,[TIMESTAMP]
            ,[EQUIPMENT_ID]
-           ,[CASSETTE_ID], [RECIPE_ID], [IS_PROCESSED], [TxStartLotsReservationReqID])
+           ,[CASSETTE_ID], [RECIPE_ID], [IS_PROCESSED], [TxStartLotsReservationReqID],[RETICLE_ID])
      VALUES
            ('{{Workflow.Properties.machineID}}'
            ,'{{Workflow.Properties.portID}}'
@@ -33,6 +33,6 @@ INSERT INTO [SIVIEW_INTEGRATION].[dbo].[MACHINE_TRANSACTION]
            ,0
            ,getdate()
            ,'{{Workflow.Properties.equipmentID}}'
-           ,'{{Workflow.Properties.cassetteID}}', @recipeText, 0, {{Workflow.Properties.ReservationReqID}})
+           ,'{{Workflow.Properties.cassetteID}}', @recipeText, 0, {{Workflow.Properties.ReservationReqID}},'{{Workflow.Properties.ReticleID}}')
 		   
 		   select @@Identity
