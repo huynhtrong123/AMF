@@ -1,0 +1,38 @@
+//-------THIS IS POST FOR STEP SEND APC DATA WITH PARAMETER VIEW
+
+
+<AnalysisEngineDataSet>
+	<AETarget>
+		<AEType>R2R</AEType>
+		<Instructions>
+			<Instruction>R2R</Instruction>
+		</Instructions>
+	</AETarget>
+	<Globals>
+		<Context>
+			<MACH_TYPE>ARCHER</MACH_TYPE>
+			<JOB_TYPE>OLMEAS</JOB_TYPE>
+			<PRODUCTID>{{Workflow.Properties.productID}}</PRODUCTID>
+			<LOTID>{{Workflow.Properties.rawdata.lotID}}</LOTID>
+			<EQUIPMENTID>{{Workflow.Properties.rawdata.equipmentID}}</EQUIPMENTID>
+			<STAGEID>{{Workflow.Properties.rawdata.stageID}}</STAGEID>
+			<OPERATIONNUMBER>{{Workflow.Properties.operationNumber}}</OPERATIONNUMBER>
+			<M_DATETIME>{{Workflow.Properties.currentDate}}</M_DATETIME>
+          <RETICLEID>{{Workflow.Properties.reticleID}}</RETICLEID>
+		</Context>
+	</Globals>
+	<SubstrateData>
+		<Data>
+			<OFFSET_X>{{Workflow.Properties.Xoff}}</OFFSET_X>
+			<OFFSET_Y>{{Workflow.Properties.Yoff}}</OFFSET_Y>
+			<SCALLING_X>{{Workflow.Properties.Xsca}}</SCALLING_X>
+			<SCALLING_Y>{{Workflow.Properties.Ysca}}</SCALLING_Y>
+			<ORTHOGONALITY>{{Workflow.Properties.Xrot}}</ORTHOGONALITY>
+			<ROTATION>{{Workflow.Properties.Yrot}}</ROTATION>
+			<SHOTSCALLING_X>{{Workflow.Properties.ShotscallingX}}</SHOTSCALLING_X>
+			<SHOTSCALLING_Y>{{Workflow.Properties.ShotscallingY}}</SHOTSCALLING_Y>
+			<SHOTORTHOGONALITY>{{Workflow.Properties.X_R_Rot}}</SHOTORTHOGONALITY>
+			<SHOTROTATION>{{Workflow.Properties.Y_R_Rot}}</SHOTROTATION>
+		</Data>
+	</SubstrateData>
+</AnalysisEngineDataSet>
